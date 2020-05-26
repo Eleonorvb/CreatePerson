@@ -15,16 +15,27 @@ public class Person {
     private String email;
     @Column(nullable = false)
     private String mobilnumber;
+    @Column(nullable = false)
+    private String husdjur;
 
     public Person() {
 
     }
 
-    public Person (String firstName, String lastName, String email,String mobilnumber){
+    public Person (String firstName, String lastName, String email,String mobilnumber,String husdjur){
         this.firstName=firstName;
         this.lastName=lastName;
         this.email=email;
         this.mobilnumber=mobilnumber;
+        this.husdjur=husdjur;
+    }
+
+    public String getHusdjur() {
+        return husdjur;
+    }
+
+    public void setHusdjur(String husdjur) {
+        this.husdjur = husdjur;
     }
 
     public Long getId() {
